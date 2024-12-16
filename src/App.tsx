@@ -4,7 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from 'react-redux';
 import { store } from './store/store';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { 
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
 import Navbar from "./components/layout/Navbar";
 import Registration from "./pages/Registration";
 import Statistics from "./pages/Statistics";
@@ -19,8 +23,8 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <div className="min-h-screen bg-background flex flex-col">
+        <Router>
+          <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#d9ccba' }}>
             <Navbar />
             <main className="pt-4 flex-1">
               <Routes>
@@ -31,7 +35,7 @@ const App = () => (
             </main>
             <Footer />
           </div>
-        </BrowserRouter>
+        </Router>
       </TooltipProvider>
     </QueryClientProvider>
   </Provider>

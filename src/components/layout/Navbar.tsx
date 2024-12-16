@@ -20,7 +20,7 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "px-3 py-2 text-sm font-medium rounded-md",
+                  "px-3 py-2 text-xl font-medium rounded-md",
                   location.pathname === item.path
                     ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
