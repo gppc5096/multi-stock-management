@@ -23,8 +23,8 @@ const initialState: OptionSettings = {
       id: 'transactionType',
       name: '구분',
       items: [
-        { id: 'buy', value: 'BUY', label: '매수' },
-        { id: 'sell', value: 'SELL', label: '매도' }
+        { id: '1', value: '매수', label: '매수' },
+        { id: '2', value: '매도', label: '매도' }
       ]
     },
     {
@@ -39,9 +39,9 @@ const initialState: OptionSettings = {
       id: 'broker',
       name: '증권사',
       items: [
-        { id: 'hanwha', value: 'HANWHA', label: '한투증권' },
-        { id: 'kiwoom', value: 'KIWOOM', label: '키움증권' },
-        { id: 'nh', value: 'NH', label: 'NH증권' }
+        { id: 'hanwha', value: '한투증권', label: '한투증권' },
+        { id: 'kiwoom', value: '키움증권', label: '키움증권' },
+        { id: 'nh', value: 'NH증권', label: 'NH증권' }
       ]
     },
     {
