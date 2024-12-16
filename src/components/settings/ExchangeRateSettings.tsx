@@ -42,7 +42,7 @@ const ExchangeRateSettings = ({
   return (
     <div>
       <h3 className="text-lg font-semibold mb-4">환율 설정</h3>
-      <Card className="p-4">
+      <Card className="p-4 border-[#676966] rounded-[5px]">
         <div className="space-y-2">
           <Label htmlFor="exchangeRate">현재 환율 (USD/KRW)</Label>
           <Input

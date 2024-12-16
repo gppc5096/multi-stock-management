@@ -107,7 +107,7 @@ const DataManagement = () => {
       <div>
         <h3 className="text-lg font-semibold mb-4">데이터 관리</h3>
         <div className="space-y-4">
-          <Card className="p-4">
+          <Card className="border-[#676966] p-4 rounded-[5px]">
             <h4 className="font-medium mb-4">설정 데이터</h4>
             <div className="flex gap-2">
               <Button onClick={handleExportSettings} variant="outline" size="sm">
@@ -129,7 +129,7 @@ const DataManagement = () => {
             </div>
           </Card>
 
-          <Card className="p-4">
+          <Card className="border-[#676966] p-4 rounded-[5px]">
             <h4 className="font-medium mb-4">주식 데이터</h4>
             <div className="flex gap-2">
               <Button onClick={handleExportStockData} variant="outline" size="sm">
@@ -151,7 +151,7 @@ const DataManagement = () => {
             </div>
           </Card>
 
-          <Card className="p-4">
+          <Card className="border-[#676966] p-4 rounded-[5px]">
             <h4 className="font-medium mb-4">데이터 초기화</h4>
             <AlertDialog>
               <AlertDialogTrigger asChild>

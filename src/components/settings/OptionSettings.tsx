@@ -10,7 +10,7 @@ import {
 } from '@/store/optionSlice';
 import { Card } from '@/components/ui/card';
 import { toast } from 'sonner';
-import CategoryItem from './CategoryItem';
+import { CategoryItem } from './CategoryItem';
 import ExchangeRateSettings from './ExchangeRateSettings';
 
 const OptionSettings = () => {
@@ -83,7 +83,7 @@ const OptionSettings = () => {
         <h3 className="text-lg font-semibold mb-4">옵션 설정</h3>
         <div className="space-y-4">
           {options.categories.map((category) => (
-            <Card key={category.id} className="p-4">
+            <Card key={category.id} className="p-4 border-[#676966] rounded-[5px]">
               <h4 className="font-medium mb-2">{category.name}</h4>
               <CategoryItem
                 category={category}

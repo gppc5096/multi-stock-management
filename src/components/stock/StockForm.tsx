@@ -155,7 +155,10 @@ const StockForm = () => {
         handleInputChange={handleInputChange}
         handleStockSelect={handleStockSelect}
       />
-      <Button type="submit" className="w-full">
+      <Button 
+        type="submit" 
+        className="w-full bg-[#0bb302] hover:bg-[#0bb302]/90 rounded-[5px] text-white text-xl"
+      >
         {editingEntry ? '수정' : '저장'}
       </Button>
       {editingEntry && (

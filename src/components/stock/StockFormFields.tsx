@@ -24,6 +24,8 @@ const StockFormFields = ({
 }: StockFormFieldsProps) => {
   const options = useSelector((state: RootState) => state.options);
 
+  const inputStyle = "rounded-[5px]";
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
@@ -33,6 +35,7 @@ const StockFormFields = ({
           type="date"
           value={formData.date}
           onChange={(e) => handleInputChange('date', e.target.value)}
+          className={inputStyle}
         />
       </div>
 
@@ -42,10 +45,10 @@ const StockFormFields = ({
           value={formData.type}
           onValueChange={(value) => handleInputChange('type', value)}
         >
-          <SelectTrigger>
+          <SelectTrigger className={inputStyle}>
             <SelectValue placeholder="구분 선택" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-[#f7eed5]">
             {options.categories
               .find(cat => cat.id === 'transactionType')
               ?.items.map(item => (
@@ -63,10 +66,10 @@ const StockFormFields = ({
           value={formData.country}
           onValueChange={(value) => handleInputChange('country', value)}
         >
-          <SelectTrigger>
+          <SelectTrigger className={inputStyle}>
             <SelectValue placeholder="국가 선택" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-[#f7eed5]">
             {options.categories
               .find(cat => cat.id === 'currency')
               ?.items.map(item => (
@@ -84,10 +87,10 @@ const StockFormFields = ({
           value={formData.broker}
           onValueChange={(value) => handleInputChange('broker', value)}
         >
-          <SelectTrigger>
+          <SelectTrigger className={inputStyle}>
             <SelectValue placeholder="증권사 선택" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-[#f7eed5]">
             {options.categories
               .find(cat => cat.id === 'broker')
               ?.items.map(item => (
@@ -105,10 +108,10 @@ const StockFormFields = ({
           value={formData.stockName}
           onValueChange={handleStockSelect}
         >
-          <SelectTrigger>
+          <SelectTrigger className={inputStyle}>
             <SelectValue placeholder="종목 선택" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="bg-[#f7eed5]">
             {options.categories
               .find(cat => cat.id === 'stocks')
               ?.items.map(item => (
@@ -126,7 +129,7 @@ const StockFormFields = ({
           id="ticker"
           value={formData.ticker}
           readOnly
-          className="bg-muted"
+          className={`bg-muted ${inputStyle}`}
         />
       </div>
 
@@ -142,6 +145,7 @@ const StockFormFields = ({
               handleInputChange('quantity', value);
             }
           }}
+          className={inputStyle}
         />
       </div>
 
@@ -157,6 +161,7 @@ const StockFormFields = ({
               handleInputChange('exchangeRate', value);
             }
           }}
+          className={inputStyle}
         />
       </div>
 
@@ -172,6 +177,7 @@ const StockFormFields = ({
               handleInputChange('price', value);
             }
           }}
+          className={inputStyle}
         />
       </div>
 
@@ -181,7 +187,7 @@ const StockFormFields = ({
           id="usdAmount"
           value={formData.usdAmount}
           readOnly
-          className="bg-muted"
+          className={`bg-muted ${inputStyle}`}
         />
       </div>
 
@@ -191,7 +197,7 @@ const StockFormFields = ({
           id="krwAmount"
           value={formData.krwAmount}
           readOnly
-          className="bg-muted"
+          className={`bg-muted ${inputStyle}`}
         />
       </div>
     </div>

@@ -24,7 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <Router>
-          <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#d9ccba' }}>
+          <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#ebeae8' }}>
             <Navbar />
             <main className="pt-4 flex-1">
               <Routes>
